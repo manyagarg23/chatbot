@@ -3,7 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LoginScreen from './LoginScreen';
 import SuccessScreen from './SuccessScreen';
-import ChatScreen from './ChatScreen'; // <-- Import the new screen
+import ChatScreen from './ChatScreen'; 
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LoginScreen />} />
         <Route path="/success" element={<SuccessScreen />} />
-        <Route path="/chat" element={<ChatScreen />} /> {/* New route */}
+        <Route path="/chat" element={<ChatScreen />} /> 
       </Routes>
     </Router>
   );

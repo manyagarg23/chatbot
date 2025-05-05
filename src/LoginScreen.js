@@ -6,7 +6,7 @@ export default function LoginScreen() {
   const [message, setMessage] = useState('');
 
   const handleTwitterLogin = () => {
-    window.location.href = 'http://localhost:4000/auth/twitter';
+    window.location.href = 'https://chatbot-1440a.web.app/auth/twitter';
   };
 
 
