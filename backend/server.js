@@ -63,7 +63,8 @@ app.get('/auth/twitter/callback', async (req, res) => {
     console.log('Access Token:', access_token);
 
     // Optionally redirect to frontend with token
-    res.redirect(`http://localhost:3000/success?token=${access_token}`);
+    res.redirect(`https://chatbot-1440a.web.app/success?token=${access_token}`);
+
 
   } catch (err) {
     console.error(err.response?.data || err.message);
