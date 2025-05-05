@@ -1,13 +1,15 @@
+const functions = require('firebase-functions');
 const express = require('express');
 const axios = require('axios');
 const cors = require('cors');
 const session = require('express-session');
-const { generateChallenge } = require('pkce-challenge'); // secure PKCE
-require('dotenv').config();
+const { generateChallenge } = require('pkce-challenge');
 
 const app = express();
+
+// CORS for frontend hosted on Firebase Hosting
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://chatbot-1440a.web.app'],
+  origin: 'https://chatbot-1440a.web.app',
   credentials: true,
 }));
 
@@ -17,13 +19,13 @@ app.use(session({
   saveUninitialized: true,
 }));
 
-const CLIENT_ID = process.env.TWITTER_CLIENT_ID;
-const CLIENT_SECRET = process.env.TWITTER_CLIENT_SECRET;
-const REDIRECT_URI = process.env.TWITTER_REDIRECT_URI;
+// Use Firebase functions config for secrets
+const CLIENT_ID = functions.config().twitter.client_id;
+const CLIENT_SECRET = functions.config().twitter.client_secret;
+const REDIRECT_URI = functions.config().twitter.redirect_uri;
 
 app.get('/auth/twitter', (req, res) => {
   const { code_challenge, code_verifier } = generateChallenge();
-
   req.session.code_verifier = code_verifier;
 
   const params = new URLSearchParams({
@@ -59,17 +61,13 @@ app.get('/auth/twitter/callback', async (req, res) => {
         },
       });
 
-    const { access_token, refresh_token } = tokenResponse.data;
-    console.log('Access Token:', access_token);
-
-    // Optionally redirect to frontend with token
+    const { access_token } = tokenResponse.data;
     res.redirect(`https://chatbot-1440a.web.app/success?token=${access_token}`);
-
-
   } catch (err) {
     console.error(err.response?.data || err.message);
     res.status(500).send('Login failed');
   }
 });
 
-app.listen(4000, () => console.log('Server running on http://localhost:4000'));
+// Export it as a Firebase Function
+exports.api = functions.https.onRequest(app);
