@@ -7,15 +7,15 @@ export default function SuccessScreen() {
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const token = params.get('token');
-
+  
     if (token) {
       localStorage.setItem('twitter_token', token);
-      navigate('/chat');
+      setTimeout(() => navigate('/chat'), 100); // slight delay
     } else {
-      // Optional: Redirect if no token present
       navigate('/');
     }
   }, [navigate]);
+  
 
   return (
     <div style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
