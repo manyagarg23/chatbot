@@ -10,7 +10,7 @@ export default function SuccessScreen() {
 
     if (token) {
       localStorage.setItem('twitter_token', token);
-      navigate('/success');
+      navigate('/chat');
     } else {
       // Optional: Redirect if no token present
       navigate('/');
