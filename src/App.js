@@ -1,11 +1,17 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LoginScreen from './LoginScreen';
-
-import './App.css';
+import SuccessScreen from './SuccessScreen';
 
 function App() {
   return (
-    <LoginScreen />
+    <Router>
+      <Routes>
+        <Route path="/" element={<LoginScreen />} />
+        <Route path="/success" element={<SuccessScreen />} />
+      </Routes>
+    </Router>
   );
 }
 
 export default App;
+

@@ -1,45 +1,30 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 export default function LoginScreen() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
+  const navigate = useNavigate();
 
-  const handleLogin = async () => {
-    try {
-      const res = await fetch('http://localhost:5000/api/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password }),
-      });
 
-      const data = await res.json();
-      if (res.ok) {
-        setMessage(data.message);
-      } else {
-        setMessage(data.message || 'Login failed');
-      }
-    } catch (err) {
-      setMessage('Error connecting to server');
-    }
+  const handleTwitterLogin = () => {
+    window.location.href = 'http://localhost:4000/auth/twitter';
   };
+
+  // useEffect(() => {
+  //   const params = new URLSearchParams(window.location.search);
+  //   const token = params.get('token');
+  //   if (token) {
+  //     localStorage.setItem('twitter_token', token);
+  //     setMessage('Logged in with Twitter!');
+  //     navigate("/success")
+  //   }
+  // }, []);
 
   return (
     <div style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
       <h2>Login</h2>
-      <input
-        type="email"
-        placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      /><br />
-      <input
-        type="password"
-        placeholder="Password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      /><br />
-      <button onClick={handleLogin}>Login</button>
+      <button onClick={handleTwitterLogin}>Login with Twitter</button>
       <p>{message}</p>
     </div>
   );
