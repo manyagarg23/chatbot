@@ -1,0 +1,431 @@
+[debug] [2025-05-05T23:23:58.550Z] ----------------------------------------------------------------------
+[debug] [2025-05-05T23:23:58.557Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\maany\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only functions
+[debug] [2025-05-05T23:23:58.559Z] CLI Version:   14.2.2
+[debug] [2025-05-05T23:23:58.560Z] Platform:      win32
+[debug] [2025-05-05T23:23:58.560Z] Node Version:  v23.1.0
+[debug] [2025-05-05T23:23:58.561Z] Time:          Mon May 05 2025 19:23:58 GMT-0400 (Eastern Daylight Time)
+[debug] [2025-05-05T23:23:58.561Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-05-05T23:23:59.291Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-05-05T23:23:59.293Z] > authorizing via signed-in user (mgarg@terpmail.umd.edu)
+[debug] [2025-05-05T23:23:59.293Z] [iam] checking project chatbot-1440a for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2025-05-05T23:23:59.296Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:23:59.297Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:23:59.303Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/chatbot-1440a:testIamPermissions [none]
+[debug] [2025-05-05T23:23:59.303Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/chatbot-1440a:testIamPermissions x-goog-quota-user=projects/chatbot-1440a
+[debug] [2025-05-05T23:23:59.304Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/chatbot-1440a:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2025-05-05T23:23:59.680Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/chatbot-1440a:testIamPermissions 200
+[debug] [2025-05-05T23:23:59.680Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/chatbot-1440a:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2025-05-05T23:23:59.681Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:23:59.682Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:23:59.682Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/chatbot-1440a/serviceAccounts/chatbot-1440a@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2025-05-05T23:23:59.682Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/chatbot-1440a/serviceAccounts/chatbot-1440a@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2025-05-05T23:23:59.811Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/chatbot-1440a/serviceAccounts/chatbot-1440a@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2025-05-05T23:23:59.811Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/chatbot-1440a/serviceAccounts/chatbot-1440a@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'chatbot-1440a'...
+[info] 
+[info] i  deploying functions 
+[debug] [2025-05-05T23:23:59.822Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:23:59.822Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:23:59.823Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/chatbot-1440a [none]
+[debug] [2025-05-05T23:23:59.940Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/chatbot-1440a 200
+[debug] [2025-05-05T23:23:59.940Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/chatbot-1440a {"projectNumber":"613457591550","projectId":"chatbot-1440a","lifecycleState":"ACTIVE","name":"Chatbot","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-05-04T03:37:40.817562Z","parent":{"type":"organization","id":"156752635661"}}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[debug] [2025-05-05T23:23:59.946Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:23:59.946Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:23:59.946Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:23:59.947Z] Checked if tokens are valid: true, expires at: 1746489631956
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2025-05-05T23:23:59.948Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:23:59.948Z] Checked if tokens are valid: true, expires at: 1746489631956
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2025-05-05T23:23:59.949Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:23:59.950Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:23:59.950Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/cloudfunctions.googleapis.com [none]
+[debug] [2025-05-05T23:23:59.950Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/chatbot-1440a
+[debug] [2025-05-05T23:23:59.955Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/runtimeconfig.googleapis.com [none]
+[debug] [2025-05-05T23:23:59.955Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/chatbot-1440a
+[debug] [2025-05-05T23:23:59.960Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/cloudbuild.googleapis.com [none]
+[debug] [2025-05-05T23:23:59.960Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/cloudbuild.googleapis.com x-goog-quota-user=projects/chatbot-1440a
+[debug] [2025-05-05T23:23:59.963Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/artifactregistry.googleapis.com [none]
+[debug] [2025-05-05T23:23:59.963Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/artifactregistry.googleapis.com x-goog-quota-user=projects/chatbot-1440a
+[debug] [2025-05-05T23:24:00.264Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/runtimeconfig.googleapis.com 200
+[debug] [2025-05-05T23:24:00.265Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2025-05-05T23:24:00.271Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/cloudbuild.googleapis.com 200
+[debug] [2025-05-05T23:24:00.272Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/cloudbuild.googleapis.com [omitted]
+[warn] !  functions: missing required API cloudbuild.googleapis.com. Enabling now... 
+[debug] [2025-05-05T23:24:00.274Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:00.274Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:00.274Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/cloudbuild.googleapis.com:enable [none]
+[debug] [2025-05-05T23:24:00.275Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/cloudbuild.googleapis.com:enable x-goog-quota-user=projects/chatbot-1440a
+[debug] [2025-05-05T23:24:00.326Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/artifactregistry.googleapis.com 200
+[debug] [2025-05-05T23:24:00.326Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/artifactregistry.googleapis.com [omitted]
+[warn] !  artifactregistry: missing required API artifactregistry.googleapis.com. Enabling now... 
+[debug] [2025-05-05T23:24:00.332Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:00.332Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:00.333Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/artifactregistry.googleapis.com:enable [none]
+[debug] [2025-05-05T23:24:00.333Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/artifactregistry.googleapis.com:enable x-goog-quota-user=projects/chatbot-1440a
+[debug] [2025-05-05T23:24:00.339Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/cloudfunctions.googleapis.com 200
+[debug] [2025-05-05T23:24:00.339Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2025-05-05T23:24:00.972Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/cloudbuild.googleapis.com:enable 200
+[debug] [2025-05-05T23:24:00.972Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/cloudbuild.googleapis.com:enable [omitted]
+[debug] [2025-05-05T23:24:01.318Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/artifactregistry.googleapis.com:enable 200
+[debug] [2025-05-05T23:24:01.318Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/artifactregistry.googleapis.com:enable [omitted]
+[debug] [2025-05-05T23:24:10.986Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:10.988Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:10.989Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/cloudbuild.googleapis.com [none]
+[debug] [2025-05-05T23:24:10.990Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/cloudbuild.googleapis.com x-goog-quota-user=projects/chatbot-1440a
+[debug] [2025-05-05T23:24:11.323Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:11.323Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:11.324Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/artifactregistry.googleapis.com [none]
+[debug] [2025-05-05T23:24:11.324Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/artifactregistry.googleapis.com x-goog-quota-user=projects/chatbot-1440a
+[debug] [2025-05-05T23:24:11.336Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/cloudbuild.googleapis.com 200
+[debug] [2025-05-05T23:24:11.337Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2025-05-05T23:24:11.675Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/artifactregistry.googleapis.com 200
+[debug] [2025-05-05T23:24:11.675Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/artifactregistry.googleapis.com [omitted]
+[info] +  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2025-05-05T23:24:11.680Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:11.680Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:11.680Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/chatbot-1440a/adminSdkConfig [none]
+[debug] [2025-05-05T23:24:11.936Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/chatbot-1440a/adminSdkConfig 200
+[debug] [2025-05-05T23:24:11.936Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/chatbot-1440a/adminSdkConfig {"projectId":"chatbot-1440a","storageBucket":"chatbot-1440a.firebasestorage.app"}
+[debug] [2025-05-05T23:24:11.938Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:11.938Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:11.938Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/chatbot-1440a/configs [none]
+[debug] [2025-05-05T23:24:12.088Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/chatbot-1440a/configs 200
+[debug] [2025-05-05T23:24:12.089Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/chatbot-1440a/configs {"configs":[{"name":"projects/chatbot-1440a/configs/twitter"}]}
+[debug] [2025-05-05T23:24:12.090Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:12.090Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:12.090Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/chatbot-1440a/configs/twitter/variables [none]
+[debug] [2025-05-05T23:24:12.193Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/chatbot-1440a/configs/twitter/variables 200
+[debug] [2025-05-05T23:24:12.194Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/chatbot-1440a/configs/twitter/variables {"variables":[{"name":"projects/chatbot-1440a/configs/twitter/variables/client_id","updateTime":"2025-05-05T23:08:16.532594482Z"},{"name":"projects/chatbot-1440a/configs/twitter/variables/client_secret","updateTime":"2025-05-05T23:08:16.515143433Z"},{"name":"projects/chatbot-1440a/configs/twitter/variables/redirect_uri","updateTime":"2025-05-05T23:08:16.514894563Z"}]}
+[debug] [2025-05-05T23:24:12.194Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:12.195Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:12.195Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:12.195Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:12.195Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:12.195Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:12.195Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/chatbot-1440a/configs/twitter/variables/client_id [none]
+[debug] [2025-05-05T23:24:12.197Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/chatbot-1440a/configs/twitter/variables/client_secret [none]
+[debug] [2025-05-05T23:24:12.201Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/chatbot-1440a/configs/twitter/variables/redirect_uri [none]
+[debug] [2025-05-05T23:24:12.307Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/chatbot-1440a/configs/twitter/variables/client_id 200
+[debug] [2025-05-05T23:24:12.307Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/chatbot-1440a/configs/twitter/variables/client_id {"name":"projects/chatbot-1440a/configs/twitter/variables/client_id","updateTime":"2025-05-05T23:08:16.532594482Z","text":"YmI2N3JhMllYVy1xQWdSTUdoUlE6MTpjaQ"}
+[debug] [2025-05-05T23:24:12.310Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/chatbot-1440a/configs/twitter/variables/client_secret 200
+[debug] [2025-05-05T23:24:12.310Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/chatbot-1440a/configs/twitter/variables/client_secret {"name":"projects/chatbot-1440a/configs/twitter/variables/client_secret","updateTime":"2025-05-05T23:08:16.515143433Z","text":"IYRAd9KJLX6a3AbyF0XhUqxcgjLJ4Q9BKNZZOAgoL9lAJcd_yG"}
+[debug] [2025-05-05T23:24:12.356Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/chatbot-1440a/configs/twitter/variables/redirect_uri 200
+[debug] [2025-05-05T23:24:12.356Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/chatbot-1440a/configs/twitter/variables/redirect_uri {"name":"projects/chatbot-1440a/configs/twitter/variables/redirect_uri","updateTime":"2025-05-05T23:08:16.514894563Z","text":"https://chatbot-1440a.web.app/auth/twitter/callback"}
+[debug] [2025-05-05T23:24:12.362Z] Validating nodejs source
+[debug] [2025-05-05T23:24:18.865Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.9.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "express-session": "^1.18.1",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1",
+    "pkce-challenge": "^5.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-05-05T23:24:18.866Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase default to determine what to deploy 
+[debug] [2025-05-05T23:24:18.875Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-05-05T23:24:18.920Z] Found firebase-functions binary at 'C:\Users\maany\Desktop\chatbot\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8614
+
+[debug] [2025-05-05T23:24:23.584Z] Got response from /__/functions.yaml {"endpoints":{"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] i  extensions: ensuring required API firebaseextensions.googleapis.com is enabled... 
+[debug] [2025-05-05T23:24:27.725Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:27.725Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:27.726Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/firebaseextensions.googleapis.com [none]
+[debug] [2025-05-05T23:24:27.726Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/firebaseextensions.googleapis.com x-goog-quota-user=projects/chatbot-1440a
+[debug] [2025-05-05T23:24:28.052Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/firebaseextensions.googleapis.com 200
+[debug] [2025-05-05T23:24:28.052Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/firebaseextensions.googleapis.com [omitted]
+[warn] !  extensions: missing required API firebaseextensions.googleapis.com. Enabling now... 
+[debug] [2025-05-05T23:24:28.054Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:28.054Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:28.055Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/firebaseextensions.googleapis.com:enable [none]
+[debug] [2025-05-05T23:24:28.055Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/firebaseextensions.googleapis.com:enable x-goog-quota-user=projects/chatbot-1440a
+[debug] [2025-05-05T23:24:28.580Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/firebaseextensions.googleapis.com:enable 200
+[debug] [2025-05-05T23:24:28.580Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/firebaseextensions.googleapis.com:enable [omitted]
+[debug] [2025-05-05T23:24:38.589Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:38.590Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:38.591Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/firebaseextensions.googleapis.com [none]
+[debug] [2025-05-05T23:24:38.591Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/firebaseextensions.googleapis.com x-goog-quota-user=projects/chatbot-1440a
+[debug] [2025-05-05T23:24:38.942Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/firebaseextensions.googleapis.com 200
+[debug] [2025-05-05T23:24:38.942Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/firebaseextensions.googleapis.com [omitted]
+[info] +  extensions: required API firebaseextensions.googleapis.com is enabled 
+[debug] [2025-05-05T23:24:38.950Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-05-05T23:24:38.951Z] > authorizing via signed-in user (mgarg@terpmail.umd.edu)
+[debug] [2025-05-05T23:24:38.952Z] [iam] checking project chatbot-1440a for permissions ["firebase.projects.get","firebaseextensions.instances.list"]
+[debug] [2025-05-05T23:24:38.952Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:38.952Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:38.953Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/chatbot-1440a:testIamPermissions [none]
+[debug] [2025-05-05T23:24:38.953Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/chatbot-1440a:testIamPermissions x-goog-quota-user=projects/chatbot-1440a
+[debug] [2025-05-05T23:24:38.953Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/chatbot-1440a:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2025-05-05T23:24:39.070Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/chatbot-1440a:testIamPermissions 200
+[debug] [2025-05-05T23:24:39.071Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/chatbot-1440a:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2025-05-05T23:24:39.072Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:39.073Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:39.073Z] >>> [apiv2][query] GET https://firebaseextensions.googleapis.com/v1beta/projects/chatbot-1440a/instances pageSize=100&pageToken=
+[debug] [2025-05-05T23:24:42.091Z] <<< [apiv2][status] GET https://firebaseextensions.googleapis.com/v1beta/projects/chatbot-1440a/instances 200
+[debug] [2025-05-05T23:24:42.092Z] <<< [apiv2][body] GET https://firebaseextensions.googleapis.com/v1beta/projects/chatbot-1440a/instances {}
+[info] i  functions: Loaded environment variables from .env. 
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged C:\Users\maany\Desktop\chatbot\functions (75.96 KB) for uploading 
+[debug] [2025-05-05T23:24:42.256Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:42.256Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:42.256Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/chatbot-1440a/locations/-/functions [none]
+[debug] [2025-05-05T23:24:43.085Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/chatbot-1440a/locations/-/functions 200
+[debug] [2025-05-05T23:24:43.085Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/chatbot-1440a/locations/-/functions {}
+[debug] [2025-05-05T23:24:43.086Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:43.087Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:43.087Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/chatbot-1440a/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2025-05-05T23:24:43.525Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/chatbot-1440a/locations/-/functions 200
+[debug] [2025-05-05T23:24:43.525Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/chatbot-1440a/locations/-/functions {}
+[info] i  functions: ensuring required API run.googleapis.com is enabled... 
+[debug] [2025-05-05T23:24:43.533Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:43.533Z] Checked if tokens are valid: true, expires at: 1746489631956
+[info] i  functions: ensuring required API eventarc.googleapis.com is enabled... 
+[debug] [2025-05-05T23:24:43.534Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:43.534Z] Checked if tokens are valid: true, expires at: 1746489631956
+[info] i  functions: ensuring required API pubsub.googleapis.com is enabled... 
+[debug] [2025-05-05T23:24:43.535Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:43.536Z] Checked if tokens are valid: true, expires at: 1746489631956
+[info] i  functions: ensuring required API storage.googleapis.com is enabled... 
+[debug] [2025-05-05T23:24:43.537Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:43.537Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:43.537Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/run.googleapis.com [none]
+[debug] [2025-05-05T23:24:43.537Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/run.googleapis.com x-goog-quota-user=projects/chatbot-1440a
+[debug] [2025-05-05T23:24:43.538Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/eventarc.googleapis.com [none]
+[debug] [2025-05-05T23:24:43.538Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/eventarc.googleapis.com x-goog-quota-user=projects/chatbot-1440a
+[debug] [2025-05-05T23:24:43.542Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/pubsub.googleapis.com [none]
+[debug] [2025-05-05T23:24:43.543Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/pubsub.googleapis.com x-goog-quota-user=projects/chatbot-1440a
+[debug] [2025-05-05T23:24:43.548Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/storage.googleapis.com [none]
+[debug] [2025-05-05T23:24:43.548Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/storage.googleapis.com x-goog-quota-user=projects/chatbot-1440a
+[debug] [2025-05-05T23:24:43.812Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/run.googleapis.com 200
+[debug] [2025-05-05T23:24:43.812Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/run.googleapis.com [omitted]
+[warn] !  functions: missing required API run.googleapis.com. Enabling now... 
+[debug] [2025-05-05T23:24:43.813Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:43.814Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:43.814Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/run.googleapis.com:enable [none]
+[debug] [2025-05-05T23:24:43.814Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/run.googleapis.com:enable x-goog-quota-user=projects/chatbot-1440a
+[debug] [2025-05-05T23:24:43.841Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/storage.googleapis.com 200
+[debug] [2025-05-05T23:24:43.842Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/storage.googleapis.com [omitted]
+[info] +  functions: required API storage.googleapis.com is enabled 
+[debug] [2025-05-05T23:24:43.878Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/eventarc.googleapis.com 200
+[debug] [2025-05-05T23:24:43.879Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/eventarc.googleapis.com [omitted]
+[warn] !  functions: missing required API eventarc.googleapis.com. Enabling now... 
+[debug] [2025-05-05T23:24:43.880Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:43.880Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:43.880Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/eventarc.googleapis.com:enable [none]
+[debug] [2025-05-05T23:24:43.880Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/eventarc.googleapis.com:enable x-goog-quota-user=projects/chatbot-1440a
+[debug] [2025-05-05T23:24:43.915Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/pubsub.googleapis.com 200
+[debug] [2025-05-05T23:24:43.916Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/pubsub.googleapis.com [omitted]
+[info] +  functions: required API pubsub.googleapis.com is enabled 
+[debug] [2025-05-05T23:24:44.421Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/run.googleapis.com:enable 200
+[debug] [2025-05-05T23:24:44.421Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/run.googleapis.com:enable [omitted]
+[debug] [2025-05-05T23:24:44.600Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/eventarc.googleapis.com:enable 200
+[debug] [2025-05-05T23:24:44.600Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/eventarc.googleapis.com:enable [omitted]
+[debug] [2025-05-05T23:24:54.438Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:54.439Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:54.439Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/run.googleapis.com [none]
+[debug] [2025-05-05T23:24:54.439Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/run.googleapis.com x-goog-quota-user=projects/chatbot-1440a
+[debug] [2025-05-05T23:24:54.604Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:54.604Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:54.604Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/eventarc.googleapis.com [none]
+[debug] [2025-05-05T23:24:54.605Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/eventarc.googleapis.com x-goog-quota-user=projects/chatbot-1440a
+[debug] [2025-05-05T23:24:54.777Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/run.googleapis.com 200
+[debug] [2025-05-05T23:24:54.778Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/run.googleapis.com [omitted]
+[info] +  functions: required API run.googleapis.com is enabled 
+[debug] [2025-05-05T23:24:54.953Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/eventarc.googleapis.com 200
+[debug] [2025-05-05T23:24:54.954Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chatbot-1440a/services/eventarc.googleapis.com [omitted]
+[info] +  functions: required API eventarc.googleapis.com is enabled 
+[info] i  functions: generating the service identity for pubsub.googleapis.com... 
+[debug] [2025-05-05T23:24:54.958Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:54.958Z] Checked if tokens are valid: true, expires at: 1746489631956
+[info] i  functions: generating the service identity for eventarc.googleapis.com... 
+[debug] [2025-05-05T23:24:54.959Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:54.959Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:54.960Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/613457591550/services/pubsub.googleapis.com:generateServiceIdentity [none]
+[debug] [2025-05-05T23:24:54.960Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/613457591550/services/eventarc.googleapis.com:generateServiceIdentity [none]
+[debug] [2025-05-05T23:24:55.477Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/613457591550/services/pubsub.googleapis.com:generateServiceIdentity 200
+[debug] [2025-05-05T23:24:55.478Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/613457591550/services/pubsub.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-613457591550@gcp-sa-pubsub.iam.gserviceaccount.com","uniqueId":"109550072323713883010"}}
+[debug] [2025-05-05T23:24:55.598Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/613457591550/services/eventarc.googleapis.com:generateServiceIdentity 200
+[debug] [2025-05-05T23:24:55.598Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/613457591550/services/eventarc.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-613457591550@gcp-sa-eventarc.iam.gserviceaccount.com","uniqueId":"110654754827583882571"}}
+[debug] [2025-05-05T23:24:55.604Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:55.605Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:55.605Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/chatbot-1440a [none]
+[debug] [2025-05-05T23:24:55.777Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/chatbot-1440a 200
+[debug] [2025-05-05T23:24:55.777Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/chatbot-1440a {"projectNumber":"613457591550","projectId":"chatbot-1440a","lifecycleState":"ACTIVE","name":"Chatbot","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-05-04T03:37:40.817562Z","parent":{"type":"organization","id":"156752635661"}}
+[debug] [2025-05-05T23:24:55.780Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:55.780Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:55.781Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/chatbot-1440a/billingInfo [none]
+[debug] [2025-05-05T23:24:56.332Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/chatbot-1440a/billingInfo 200
+[debug] [2025-05-05T23:24:56.332Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/chatbot-1440a/billingInfo {"name":"projects/chatbot-1440a/billingInfo","projectId":"chatbot-1440a","billingAccountName":"billingAccounts/01B3C1-B4B49B-DA66AD","billingEnabled":true}
+[debug] [2025-05-05T23:24:56.336Z] [functions] found 1 new HTTP functions, testing setIamPolicy permission...
+[debug] [2025-05-05T23:24:56.337Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:56.338Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:56.338Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/chatbot-1440a:testIamPermissions [none]
+[debug] [2025-05-05T23:24:56.338Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/chatbot-1440a:testIamPermissions x-goog-quota-user=projects/chatbot-1440a
+[debug] [2025-05-05T23:24:56.338Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/chatbot-1440a:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2025-05-05T23:24:56.400Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/chatbot-1440a:testIamPermissions 200
+[debug] [2025-05-05T23:24:56.401Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/chatbot-1440a:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2025-05-05T23:24:56.401Z] [functions] found setIamPolicy permission, proceeding with deploy
+[debug] [2025-05-05T23:24:56.403Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:56.403Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:56.404Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/chatbot-1440a/locations/us-central1/functions:generateUploadUrl [none]
+[debug] [2025-05-05T23:24:58.096Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/chatbot-1440a/locations/us-central1/functions:generateUploadUrl 200
+[debug] [2025-05-05T23:24:58.096Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/chatbot-1440a/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/gcf-v2-uploads-613457591550.us-central1.cloudfunctions.appspot.com/915abe00-37a5-4878-8744-8c25c8bc874c.zip?GoogleAccessId=service-613457591550@gcf-admin-robot.iam.gserviceaccount.com&Expires=1746489296&Signature=GYG3iesLhy4kl6uHWeKauDLrzZdThpAYwVOzZGt%2FGZjlE80wkziRG%2BnhqdwkY01iqD14NBR07E20BNXLpnaay3AIzdvS9CIQ%2F%2BnJ6FiOPELFsJ1UXuiTBQ9koqhisy%2BcGc%2BRTiIqig8yr6YTaV3GZ6qNgCJv%2F61ahGpLa0T6v%2BlNA8nG0dDUFcTVR%2FAmxVmpHmu3LnW7QMtPNnyJk19EbkYubM6H38KoQEi0vciA%2FCymAkPkRBvH4f%2BeS%2Fkkg1rXHW6i4lD7rAF793JqnDR3Qi6YacIs4KlpsX9IfD9I%2Bsave1Ku1Fmab82u6QlUxk1seSXB250%2FDaSxxYWuAzZspg%3D%3D","storageSource":{"bucket":"gcf-v2-uploads-613457591550.us-central1.cloudfunctions.appspot.com","object":"915abe00-37a5-4878-8744-8c25c8bc874c.zip"}}
+[debug] [2025-05-05T23:24:58.101Z] >>> [apiv2][query] PUT https://storage.googleapis.com/gcf-v2-uploads-613457591550.us-central1.cloudfunctions.appspot.com/915abe00-37a5-4878-8744-8c25c8bc874c.zip GoogleAccessId=service-613457591550%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1746489296&Signature=GYG3iesLhy4kl6uHWeKauDLrzZdThpAYwVOzZGt%2FGZjlE80wkziRG%2BnhqdwkY01iqD14NBR07E20BNXLpnaay3AIzdvS9CIQ%2F%2BnJ6FiOPELFsJ1UXuiTBQ9koqhisy%2BcGc%2BRTiIqig8yr6YTaV3GZ6qNgCJv%2F61ahGpLa0T6v%2BlNA8nG0dDUFcTVR%2FAmxVmpHmu3LnW7QMtPNnyJk19EbkYubM6H38KoQEi0vciA%2FCymAkPkRBvH4f%2BeS%2Fkkg1rXHW6i4lD7rAF793JqnDR3Qi6YacIs4KlpsX9IfD9I%2Bsave1Ku1Fmab82u6QlUxk1seSXB250%2FDaSxxYWuAzZspg%3D%3D
+[debug] [2025-05-05T23:24:58.102Z] >>> [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-613457591550.us-central1.cloudfunctions.appspot.com/915abe00-37a5-4878-8744-8c25c8bc874c.zip [stream]
+[debug] [2025-05-05T23:24:58.296Z] <<< [apiv2][status] PUT https://storage.googleapis.com/gcf-v2-uploads-613457591550.us-central1.cloudfunctions.appspot.com/915abe00-37a5-4878-8744-8c25c8bc874c.zip 200
+[debug] [2025-05-05T23:24:58.296Z] <<< [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-613457591550.us-central1.cloudfunctions.appspot.com/915abe00-37a5-4878-8744-8c25c8bc874c.zip [omitted]
+[info] +  functions: functions folder uploaded successfully 
+[info] i  functions: creating Node.js 22 (2nd Gen) function api(us-central1)... 
+[debug] [2025-05-05T23:24:58.316Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:58.317Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:58.317Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/chatbot-1440a/locations/us-central1/functions functionId=api
+[debug] [2025-05-05T23:24:58.317Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/chatbot-1440a/locations/us-central1/functions {"name":"projects/chatbot-1440a/locations/us-central1/functions/api","buildConfig":{"runtime":"nodejs22","entryPoint":"api","source":{"storageSource":{"bucket":"gcf-v2-uploads-613457591550.us-central1.cloudfunctions.appspot.com","object":"915abe00-37a5-4878-8744-8c25c8bc874c.zip"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}},"serviceConfig":{"environmentVariables":{"TWITTER_CLIENT_ID":"YmI2N3JhMllYVy1xQWdSTUdoUlE6MTpjaQ","TWITTER_CLIENT_SECRET":"IYRAd9KJLX6a3AbyF0XhUqxcgjLJ4Q9BKNZZOAgoL9lAJcd_yG","TWITTER_REDIRECT_URI":"https://chatbot-1440a.web.app/auth/twitter/callback","FIREBASE_CONFIG":"{\"projectId\":\"chatbot-1440a\",\"storageBucket\":\"chatbot-1440a.firebasestorage.app\"}","GCLOUD_PROJECT":"chatbot-1440a","EVENTARC_CLOUD_EVENT_SOURCE":"projects/chatbot-1440a/locations/us-central1/services/api","FUNCTION_TARGET":"api","LOG_EXECUTION_ID":"true"},"ingressSettings":null,"timeoutSeconds":null,"serviceAccountEmail":null,"availableMemory":"256Mi","minInstanceCount":null,"maxInstanceCount":null,"maxInstanceRequestConcurrency":80,"availableCpu":"1","vpcConnector":null,"vpcConnectorEgressSettings":null},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"b3ad77ca786dc80ee82c095599a9bdbf5a79eb70"}}
+[debug] [2025-05-05T23:24:59.664Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/chatbot-1440a/locations/us-central1/functions 200
+[debug] [2025-05-05T23:24:59.664Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/chatbot-1440a/locations/us-central1/functions {"name":"projects/chatbot-1440a/locations/us-central1/operations/operation-1746487496821-6346bceda4c4d-12f09989-efedcff4","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2025-05-05T23:24:57.895263493Z","target":"projects/chatbot-1440a/locations/us-central1/functions/api","verb":"create","cancelRequested":false,"apiVersion":"v2"},"done":false}
+[debug] [2025-05-05T23:24:59.666Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:59.666Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:24:59.667Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/chatbot-1440a/locations/us-central1/operations/operation-1746487496821-6346bceda4c4d-12f09989-efedcff4 [none]
+[debug] [2025-05-05T23:24:59.914Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/chatbot-1440a/locations/us-central1/operations/operation-1746487496821-6346bceda4c4d-12f09989-efedcff4 200
+[debug] [2025-05-05T23:24:59.915Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/chatbot-1440a/locations/us-central1/operations/operation-1746487496821-6346bceda4c4d-12f09989-efedcff4 {"name":"projects/chatbot-1440a/locations/us-central1/operations/operation-1746487496821-6346bceda4c4d-12f09989-efedcff4","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2025-05-05T23:24:57.895263493Z","target":"projects/chatbot-1440a/locations/us-central1/functions/api","verb":"create","cancelRequested":false,"apiVersion":"v2"},"done":false}
+[debug] [2025-05-05T23:25:00.420Z] [create-default-us-central1-api] Retrying task index 0
+[debug] [2025-05-05T23:25:00.420Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:25:00.421Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:25:00.421Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/chatbot-1440a/locations/us-central1/operations/operation-1746487496821-6346bceda4c4d-12f09989-efedcff4 [none]
+[debug] [2025-05-05T23:25:00.599Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/chatbot-1440a/locations/us-central1/operations/operation-1746487496821-6346bceda4c4d-12f09989-efedcff4 200
+[debug] [2025-05-05T23:25:00.599Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/chatbot-1440a/locations/us-central1/operations/operation-1746487496821-6346bceda4c4d-12f09989-efedcff4 {"name":"projects/chatbot-1440a/locations/us-central1/operations/operation-1746487496821-6346bceda4c4d-12f09989-efedcff4","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2025-05-05T23:24:57.895263493Z","target":"projects/chatbot-1440a/locations/us-central1/functions/api","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/chatbot-1440a/locations/us-central1/functions/api","buildConfig":{"runtime":"nodejs22","entryPoint":"api","source":{"storageSource":{"bucket":"gcf-v2-sources-613457591550-us-central1","object":"api/function-source.zip","generation":"1746487497633569"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/chatbot-1440a/serviceAccounts/613457591550-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/chatbot-1440a/locations/us-central1/services/api","timeoutSeconds":60,"environmentVariables":{"TWITTER_CLIENT_ID":"YmI2N3JhMllYVy1xQWdSTUdoUlE6MTpjaQ","TWITTER_CLIENT_SECRET":"IYRAd9KJLX6a3AbyF0XhUqxcgjLJ4Q9BKNZZOAgoL9lAJcd_yG","TWITTER_REDIRECT_URI":"https://chatbot-1440a.web.app/auth/twitter/callback","FIREBASE_CONFIG":"{\"projectId\":\"chatbot-1440a\",\"storageBucket\":\"chatbot-1440a.firebasestorage.app\"}","GCLOUD_PROJECT":"chatbot-1440a","EVENTARC_CLOUD_EVENT_SOURCE":"projects/chatbot-1440a/locations/us-central1/services/api","FUNCTION_TARGET":"api","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"613457591550-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"b3ad77ca786dc80ee82c095599a9bdbf5a79eb70"},"environment":"GEN_2"},"stages":[{"name":"BUILD","state":"NOT_STARTED"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION"},"done":false}
+[debug] [2025-05-05T23:25:01.609Z] [create-default-us-central1-api] Retrying task index 0
+[debug] [2025-05-05T23:25:01.610Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:25:01.611Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:25:01.611Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/chatbot-1440a/locations/us-central1/operations/operation-1746487496821-6346bceda4c4d-12f09989-efedcff4 [none]
+[debug] [2025-05-05T23:25:01.833Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/chatbot-1440a/locations/us-central1/operations/operation-1746487496821-6346bceda4c4d-12f09989-efedcff4 200
+[debug] [2025-05-05T23:25:01.833Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/chatbot-1440a/locations/us-central1/operations/operation-1746487496821-6346bceda4c4d-12f09989-efedcff4 {"name":"projects/chatbot-1440a/locations/us-central1/operations/operation-1746487496821-6346bceda4c4d-12f09989-efedcff4","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2025-05-05T23:24:57.895263493Z","target":"projects/chatbot-1440a/locations/us-central1/functions/api","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/chatbot-1440a/locations/us-central1/functions/api","buildConfig":{"runtime":"nodejs22","entryPoint":"api","source":{"storageSource":{"bucket":"gcf-v2-sources-613457591550-us-central1","object":"api/function-source.zip","generation":"1746487497633569"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/chatbot-1440a/serviceAccounts/613457591550-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/chatbot-1440a/locations/us-central1/services/api","timeoutSeconds":60,"environmentVariables":{"TWITTER_CLIENT_ID":"YmI2N3JhMllYVy1xQWdSTUdoUlE6MTpjaQ","TWITTER_CLIENT_SECRET":"IYRAd9KJLX6a3AbyF0XhUqxcgjLJ4Q9BKNZZOAgoL9lAJcd_yG","TWITTER_REDIRECT_URI":"https://chatbot-1440a.web.app/auth/twitter/callback","FIREBASE_CONFIG":"{\"projectId\":\"chatbot-1440a\",\"storageBucket\":\"chatbot-1440a.firebasestorage.app\"}","GCLOUD_PROJECT":"chatbot-1440a","EVENTARC_CLOUD_EVENT_SOURCE":"projects/chatbot-1440a/locations/us-central1/services/api","FUNCTION_TARGET":"api","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"613457591550-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"b3ad77ca786dc80ee82c095599a9bdbf5a79eb70"},"environment":"GEN_2"},"stages":[{"name":"BUILD","state":"NOT_STARTED"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION"},"done":false}
+[debug] [2025-05-05T23:25:03.841Z] [create-default-us-central1-api] Retrying task index 0
+[debug] [2025-05-05T23:25:03.842Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:25:03.843Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:25:03.843Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/chatbot-1440a/locations/us-central1/operations/operation-1746487496821-6346bceda4c4d-12f09989-efedcff4 [none]
+[debug] [2025-05-05T23:25:04.061Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/chatbot-1440a/locations/us-central1/operations/operation-1746487496821-6346bceda4c4d-12f09989-efedcff4 200
+[debug] [2025-05-05T23:25:04.062Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/chatbot-1440a/locations/us-central1/operations/operation-1746487496821-6346bceda4c4d-12f09989-efedcff4 {"name":"projects/chatbot-1440a/locations/us-central1/operations/operation-1746487496821-6346bceda4c4d-12f09989-efedcff4","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2025-05-05T23:24:57.895263493Z","target":"projects/chatbot-1440a/locations/us-central1/functions/api","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/chatbot-1440a/locations/us-central1/functions/api","buildConfig":{"runtime":"nodejs22","entryPoint":"api","source":{"storageSource":{"bucket":"gcf-v2-sources-613457591550-us-central1","object":"api/function-source.zip","generation":"1746487497633569"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/chatbot-1440a/serviceAccounts/613457591550-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/chatbot-1440a/locations/us-central1/services/api","timeoutSeconds":60,"environmentVariables":{"TWITTER_CLIENT_ID":"YmI2N3JhMllYVy1xQWdSTUdoUlE6MTpjaQ","TWITTER_CLIENT_SECRET":"IYRAd9KJLX6a3AbyF0XhUqxcgjLJ4Q9BKNZZOAgoL9lAJcd_yG","TWITTER_REDIRECT_URI":"https://chatbot-1440a.web.app/auth/twitter/callback","FIREBASE_CONFIG":"{\"projectId\":\"chatbot-1440a\",\"storageBucket\":\"chatbot-1440a.firebasestorage.app\"}","GCLOUD_PROJECT":"chatbot-1440a","EVENTARC_CLOUD_EVENT_SOURCE":"projects/chatbot-1440a/locations/us-central1/services/api","FUNCTION_TARGET":"api","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"613457591550-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"b3ad77ca786dc80ee82c095599a9bdbf5a79eb70"},"environment":"GEN_2"},"stages":[{"name":"BUILD","state":"NOT_STARTED"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION"},"done":false}
+[debug] [2025-05-05T23:25:08.066Z] [create-default-us-central1-api] Retrying task index 0
+[debug] [2025-05-05T23:25:08.068Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:25:08.069Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:25:08.069Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/chatbot-1440a/locations/us-central1/operations/operation-1746487496821-6346bceda4c4d-12f09989-efedcff4 [none]
+[debug] [2025-05-05T23:25:08.284Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/chatbot-1440a/locations/us-central1/operations/operation-1746487496821-6346bceda4c4d-12f09989-efedcff4 200
+[debug] [2025-05-05T23:25:08.284Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/chatbot-1440a/locations/us-central1/operations/operation-1746487496821-6346bceda4c4d-12f09989-efedcff4 {"name":"projects/chatbot-1440a/locations/us-central1/operations/operation-1746487496821-6346bceda4c4d-12f09989-efedcff4","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2025-05-05T23:24:57.895263493Z","target":"projects/chatbot-1440a/locations/us-central1/functions/api","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/chatbot-1440a/locations/us-central1/functions/api","buildConfig":{"runtime":"nodejs22","entryPoint":"api","source":{"storageSource":{"bucket":"gcf-v2-sources-613457591550-us-central1","object":"api/function-source.zip","generation":"1746487497633569"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/chatbot-1440a/serviceAccounts/613457591550-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/chatbot-1440a/locations/us-central1/services/api","timeoutSeconds":60,"environmentVariables":{"TWITTER_CLIENT_ID":"YmI2N3JhMllYVy1xQWdSTUdoUlE6MTpjaQ","TWITTER_CLIENT_SECRET":"IYRAd9KJLX6a3AbyF0XhUqxcgjLJ4Q9BKNZZOAgoL9lAJcd_yG","TWITTER_REDIRECT_URI":"https://chatbot-1440a.web.app/auth/twitter/callback","FIREBASE_CONFIG":"{\"projectId\":\"chatbot-1440a\",\"storageBucket\":\"chatbot-1440a.firebasestorage.app\"}","GCLOUD_PROJECT":"chatbot-1440a","EVENTARC_CLOUD_EVENT_SOURCE":"projects/chatbot-1440a/locations/us-central1/services/api","FUNCTION_TARGET":"api","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"613457591550-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"b3ad77ca786dc80ee82c095599a9bdbf5a79eb70"},"environment":"GEN_2"},"stages":[{"name":"BUILD","state":"NOT_STARTED"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION"},"done":false}
+[debug] [2025-05-05T23:25:16.298Z] [create-default-us-central1-api] Retrying task index 0
+[debug] [2025-05-05T23:25:16.299Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:25:16.299Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:25:16.299Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/chatbot-1440a/locations/us-central1/operations/operation-1746487496821-6346bceda4c4d-12f09989-efedcff4 [none]
+[debug] [2025-05-05T23:25:16.377Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/chatbot-1440a/locations/us-central1/operations/operation-1746487496821-6346bceda4c4d-12f09989-efedcff4 200
+[debug] [2025-05-05T23:25:16.377Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/chatbot-1440a/locations/us-central1/operations/operation-1746487496821-6346bceda4c4d-12f09989-efedcff4 {"name":"projects/chatbot-1440a/locations/us-central1/operations/operation-1746487496821-6346bceda4c4d-12f09989-efedcff4","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2025-05-05T23:24:57.895263493Z","endTime":"2025-05-05T23:25:14.221826784Z","target":"projects/chatbot-1440a/locations/us-central1/functions/api","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/chatbot-1440a/locations/us-central1/functions/api","buildConfig":{"runtime":"nodejs22","entryPoint":"api","source":{"storageSource":{"bucket":"gcf-v2-sources-613457591550-us-central1","object":"api/function-source.zip","generation":"1746487497633569"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/chatbot-1440a/serviceAccounts/613457591550-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/chatbot-1440a/locations/us-central1/services/api","timeoutSeconds":60,"environmentVariables":{"TWITTER_CLIENT_ID":"YmI2N3JhMllYVy1xQWdSTUdoUlE6MTpjaQ","TWITTER_CLIENT_SECRET":"IYRAd9KJLX6a3AbyF0XhUqxcgjLJ4Q9BKNZZOAgoL9lAJcd_yG","TWITTER_REDIRECT_URI":"https://chatbot-1440a.web.app/auth/twitter/callback","FIREBASE_CONFIG":"{\"projectId\":\"chatbot-1440a\",\"storageBucket\":\"chatbot-1440a.firebasestorage.app\"}","GCLOUD_PROJECT":"chatbot-1440a","EVENTARC_CLOUD_EVENT_SOURCE":"projects/chatbot-1440a/locations/us-central1/services/api","FUNCTION_TARGET":"api","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"613457591550-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"b3ad77ca786dc80ee82c095599a9bdbf5a79eb70"},"environment":"GEN_2"},"stages":[{"name":"ARTIFACT_REGISTRY","message":"Deleting function artifacts in Artifact Registry","state":"COMPLETE"},{"name":"SERVICE","message":"Deleting Cloud Run service","state":"COMPLETE","resource":"projects/chatbot-1440a/locations/us-central1/services/api"}],"operationType":"CREATE_FUNCTION"},"done":true,"error":{"code":13,"message":"Could not build the function. "}}
+[debug] [2025-05-05T23:25:16.377Z] Got source token undefined for region us-central1
+[error] Could not build the function. 
+[debug] [2025-05-05T23:25:16.401Z] Total Function Deployment time: 18082
+[debug] [2025-05-05T23:25:16.401Z] 1 Functions Deployed
+[debug] [2025-05-05T23:25:16.401Z] 1 Functions Errored
+[debug] [2025-05-05T23:25:16.401Z] 0 Function Deployments Aborted
+[debug] [2025-05-05T23:25:16.401Z] Average Function Deployment time: 18072
+[info] 
+[info] Functions deploy had errors with the following functions:
+	api(us-central1)
+[debug] [2025-05-05T23:25:16.458Z] Not printing URL for HTTPS function. Typically this means it didn't match a filter or we failed deployment
+[debug] [2025-05-05T23:25:16.460Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:25:16.460Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:25:16.460Z] >>> [apiv2][query] GET https://artifactregistry.googleapis.com/v1/projects/chatbot-1440a/locations/us-central1/repositories/gcf-artifacts [none]
+[debug] [2025-05-05T23:25:17.054Z] <<< [apiv2][status] GET https://artifactregistry.googleapis.com/v1/projects/chatbot-1440a/locations/us-central1/repositories/gcf-artifacts 200
+[debug] [2025-05-05T23:25:17.054Z] <<< [apiv2][body] GET https://artifactregistry.googleapis.com/v1/projects/chatbot-1440a/locations/us-central1/repositories/gcf-artifacts {"name":"projects/chatbot-1440a/locations/us-central1/repositories/gcf-artifacts","format":"DOCKER","description":"This repository is created and used by Cloud Functions for storing function docker images.","labels":{"goog-managed-by":"cloudfunctions"},"createTime":"2025-05-05T23:25:09.789944Z","updateTime":"2025-05-05T23:25:09.789944Z","mode":"STANDARD_REPOSITORY","vulnerabilityScanningConfig":{"lastEnableTime":"2025-05-05T23:24:58.084232132Z","enablementState":"SCANNING_DISABLED","enablementStateReason":"API containerscanning.googleapis.com is not enabled."},"satisfiesPzi":true,"registryUri":"us-central1-docker.pkg.dev/chatbot-1440a/gcf-artifacts"}
+[warn] !  functions: No cleanup policy detected for repositories in us-central1. This may result in a small monthly bill as container images accumulate over time. 
+[info] i  functions: Configuring cleanup policy for repository in us-central1. Images older than 3 days will be automatically deleted. 
+[debug] [2025-05-05T23:26:03.347Z] Setting up artifact cleanup policy for region us-central1
+[debug] [2025-05-05T23:26:03.350Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:26:03.351Z] Checked if tokens are valid: true, expires at: 1746489631956
+[debug] [2025-05-05T23:26:03.351Z] >>> [apiv2][query] PATCH https://artifactregistry.googleapis.com/v1/projects/chatbot-1440a/locations/us-central1/repositories/gcf-artifacts updateMask=name%2CcleanupPolicies%2CcleanupPolicyDryRun%2Clabels
+[debug] [2025-05-05T23:26:03.351Z] >>> [apiv2][body] PATCH https://artifactregistry.googleapis.com/v1/projects/chatbot-1440a/locations/us-central1/repositories/gcf-artifacts {"name":"projects/chatbot-1440a/locations/us-central1/repositories/gcf-artifacts","cleanupPolicies":{"firebase-functions-cleanup":{"id":"firebase-functions-cleanup","condition":{"tagState":"ANY","olderThan":"259200s"},"action":"DELETE"}},"cleanupPolicyDryRun":false,"labels":{"goog-managed-by":"cloudfunctions"}}
+[debug] [2025-05-05T23:26:03.615Z] <<< [apiv2][status] PATCH https://artifactregistry.googleapis.com/v1/projects/chatbot-1440a/locations/us-central1/repositories/gcf-artifacts 200
+[debug] [2025-05-05T23:26:03.615Z] <<< [apiv2][body] PATCH https://artifactregistry.googleapis.com/v1/projects/chatbot-1440a/locations/us-central1/repositories/gcf-artifacts {"name":"projects/chatbot-1440a/locations/us-central1/repositories/gcf-artifacts","format":"DOCKER","description":"This repository is created and used by Cloud Functions for storing function docker images.","labels":{"goog-managed-by":"cloudfunctions"},"createTime":"2025-05-05T23:25:09.789944Z","updateTime":"2025-05-05T23:26:01.855745Z","mode":"STANDARD_REPOSITORY","cleanupPolicies":{"firebase-functions-cleanup":{"id":"firebase-functions-cleanup","action":"DELETE","condition":{"tagState":"ANY","olderThan":"259200s"}}},"vulnerabilityScanningConfig":{"lastEnableTime":"2025-05-05T23:24:58.084232132Z","enablementState":"SCANNING_DISABLED","enablementStateReason":"API containerscanning.googleapis.com is not enabled."},"satisfiesPzi":true}
+[info] i  functions: Configured cleanup policy for repository in us-central1. 
+[debug] [2025-05-05T23:26:03.616Z] Functions deploy failed.
+[debug] [2025-05-05T23:26:03.617Z] {
+  "endpoint": {
+    "id": "api",
+    "project": "chatbot-1440a",
+    "region": "us-central1",
+    "entryPoint": "api",
+    "platform": "gcfv2",
+    "runtime": "nodejs22",
+    "httpsTrigger": {},
+    "labels": {
+      "deployment-tool": "cli-firebase"
+    },
+    "serviceAccount": null,
+    "ingressSettings": null,
+    "availableMemoryMb": null,
+    "timeoutSeconds": null,
+    "maxInstances": null,
+    "minInstances": null,
+    "concurrency": 80,
+    "vpc": null,
+    "environmentVariables": {
+      "TWITTER_CLIENT_ID": "YmI2N3JhMllYVy1xQWdSTUdoUlE6MTpjaQ",
+      "TWITTER_CLIENT_SECRET": "IYRAd9KJLX6a3AbyF0XhUqxcgjLJ4Q9BKNZZOAgoL9lAJcd_yG",
+      "TWITTER_REDIRECT_URI": "https://chatbot-1440a.web.app/auth/twitter/callback",
+      "FIREBASE_CONFIG": "{\"projectId\":\"chatbot-1440a\",\"storageBucket\":\"chatbot-1440a.firebasestorage.app\"}",
+      "GCLOUD_PROJECT": "chatbot-1440a",
+      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/chatbot-1440a/locations/us-central1/services/api"
+    },
+    "codebase": "default",
+    "cpu": 1,
+    "targetedByOnly": false,
+    "hash": "b3ad77ca786dc80ee82c095599a9bdbf5a79eb70"
+  },
+  "op": "create",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "exit": 1,
+    "message": "Could not build the function. ",
+    "original": {
+      "code": 13,
+      "message": "Could not build the function. "
+    },
+    "status": 13,
+    "code": 13
+  }
+}
+[debug] [2025-05-05T23:26:03.673Z] Error: Failed to create function api in region us-central1
+    at C:\Users\maany\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:294:27
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Fabricator.createV2Function (C:\Users\maany\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:278:30)
+    at async Fabricator.createEndpoint (C:\Users\maany\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:137:13)
+    at async handle (C:\Users\maany\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:89:17)
+[error] 
+[error] Error: There was an error deploying functions
